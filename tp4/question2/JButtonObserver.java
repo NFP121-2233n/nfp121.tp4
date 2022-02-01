@@ -1,16 +1,15 @@
 package question2;
-
-//import java.awt.event. // à compléter
-//import java.awt.event. // à compléter
+import java.awt.event.ActionEvent; 
+import java.awt.event.ActionListener;
 import java.awt.TextArea;
 
 /**
  * Décrivez votre classe JButtonObserver ici.
  * 
- * @author (votre nom)
+ * @author Samira Rahme
  * @version (un numéro de version ou une date)
  */
-public class JButtonObserver { // à compléter
+public class JButtonObserver implements ActionListener{ 
 
     private String nom;
     private TextArea contenu;
@@ -36,8 +35,9 @@ public class JButtonObserver { // à compléter
      * @param à
      *            compléter
      */
-    public void action________/* à compléter */(/* à compléter */) {
-        String message = ""; // à compléter, inspirez-vous de l'applette de l'énoncé
+     public void actionPerformed (ActionEvent ae) {
+   
+        String message = "observateur " + this.nom + " : clic du bouton " + ae.getActionCommand();
         contenu.append(message + "\n");
     }
 
